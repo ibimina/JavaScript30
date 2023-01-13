@@ -63,10 +63,13 @@
 </body>
 <script>
   const keys = document.querySelectorAll(".key[data-key]")
-    const handleAudio = (e) => {
-         const key = e.target.parentNode.classList.add("playing")
-    }
- 
-    keys.forEach(key => key.addEventListener("click", handleAudio))
+  const handleAudio = (e) => {
+    const key = e.target.parentNode.classList.add("playing")
+    const audio = document.querySelector(`audio[data-key="${e.target.parentNode.dataset.key}"]`)
+
+  }
+
+  keys.forEach(key => key.addEventListener("click", handleAudio))
 </script>
+
 </html>
