@@ -66,6 +66,9 @@
   const handleAudio = (e) => {
     const key = e.target.parentNode.classList.add("playing")
     const audio = document.querySelector(`audio[data-key="${e.target.parentNode.dataset.key}"]`)
+    if (!audio) {
+      return e.target.parentNode.classList.remove("playing")
+    }
 
   }
 
