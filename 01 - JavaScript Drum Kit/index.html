@@ -69,7 +69,7 @@
     if (!audio) {
       return e.target.parentNode.classList.remove("playing")
     }
-
+    audio.play()
   }
 
   keys.forEach(key => key.addEventListener("click", handleAudio))
